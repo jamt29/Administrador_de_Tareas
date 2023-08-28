@@ -22,8 +22,8 @@ namespace TareasCompletadas.Controllers
         // GET: TaskItem
         public async Task<IActionResult> Index()
         {
-            ViewBag.TareasIncompletas = await _context.Tasks.Where(p => !p.IsCompleted).ToListAsync();
-            ViewBag.TareasCompletadas = await _context.Tasks.Where(p => p.IsCompleted).ToListAsync();
+            ViewBag.TareasIncompletas = await _context.Tasks.Where(p => !p.IsCompleted).ToListAsync(); //Recupera todas las tareas incompletas de la base de datos y las almcacena en un viewbag
+            ViewBag.TareasCompletadas = await _context.Tasks.Where(p => p.IsCompleted).ToListAsync(); //Recupera todas las tareas completas de la base de datos y las almcacena en un viewbag
 
 
 
