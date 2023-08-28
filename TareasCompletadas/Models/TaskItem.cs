@@ -22,15 +22,15 @@ namespace TareasCompletadas.Models
 
         public bool IsCompleted
         {
-            get { return _isCompleted; }
+            get { return _isCompleted; } //Propiedad publica para acceder al estado de completado
             set
             {
-                if (_isCompleted != value)
+                if (_isCompleted != value) //Comprobar si el valor esta cambiando
                 {
-                    _isCompleted = value;
+                    _isCompleted = value; //Establecer el valor de completado 
                     if (_isCompleted)
                     {
-                        _fechaEntrega = DateTime.Now; // Actualizar la fecha al marcar como completado
+                        _fechaEntrega = DateTime.Now; //Si se marca como completado, actualizar la fecha de entrega
                     }
                 }
             }
